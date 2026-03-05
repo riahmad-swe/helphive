@@ -20,12 +20,12 @@ export const Home = () => {
 	const [resolvedTasks, setResolvedTasks] = useState([]);
 
 	return (
-		<main className="px-48 py-20 space-y-20">
+		<main className="px-4 lg:px-48 py-8 lg:py-20 space-y-16 lg:space-y-20">
 			<Overview
 				inProgressCount={inProgressCount}
 				resolvedCount={resolvedCount}
 			/>
-			<div className="grid grid-cols-4 gap-8">
+			<div className="grid lg:grid-cols-4 gap-8">
 				<Suspense>
 					<CustomerTickets
 						ticketsPromise={ticketsPromise}

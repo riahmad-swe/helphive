@@ -3,7 +3,7 @@ import Logo from "../assets/logo.png";
 
 export const Navbar = () => {
 	return (
-		<nav className="bg-neutral-50 px-48 py-3 flex items-center justify-between border-b border-b-neutral-200 sticky top-0 z-50">
+		<nav className="bg-neutral-50 px-4 lg:px-48 py-3 flex items-center justify-between border-b border-b-neutral-200 sticky top-0 z-50">
 			{/* Logo */}
 			<a href="/">
 				<div className="flex items-center gap-x-2">

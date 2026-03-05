@@ -7,28 +7,33 @@ import { YoutubeIcon } from "lucide-react";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-neutral-950 text-neutral-400 pt-16 pb-8 px-48">
-			<div className="flex items-start justify-between">
+		<footer className="bg-neutral-950 text-neutral-400 pt-8 lg:pt-16 pb-8 px-4 lg:px-48">
+			<div className="flex flex-row flex-wrap items-start justify-between gap-y-4">
 				{/* Brand-related metadata */}
-				<div className="max-w-md">
-					<div className="flex items-center gap-x-2 mb-4">
+				<div className="lg:max-w-md">
+					<div className="flex items-center gap-x-2 mb-2 lg:mb-4">
 						<img
 							src={Logo}
 							alt="Logo"
 							className="size-10"
 						/>
-						<h5 className="text-[27px] font-semibold text-light">HelpHive</h5>
+						<h5 className="text-[27px] font-semibold text-light">
+							HelpHive
+						</h5>
 					</div>
 					<p className="leading-normal!">
-						Support your customers without the chaos. Organize tickets, monitor
-						conversations, and resolve problems efficiently. Everything you need to
-						keep your customers happy, all in one place.
+						Support your customers without the chaos. Organize
+						tickets, monitor conversations, and resolve problems
+						efficiently. Everything you need to keep your customers
+						happy, all in one place.
 					</p>
 				</div>
 				{/* Company Links */}
 				<div>
-					<h5 className="text-xl font-medium text-light mb-4">Company</h5>
-					<div className="flex flex-col gap-y-3 text-[17px]">
+					<h5 className="text-xl font-medium text-light mb-2 lg:mb-4">
+						Company
+					</h5>
+					<div className="flex flex-col gap-y-2 lg:gap-y-3 text-[17px]">
 						<a
 							href="#"
 							className="hover:text-light transition-colors duration-150"
@@ -51,8 +56,10 @@ export const Footer = () => {
 				</div>
 				{/* Services Links */}
 				<div>
-					<h5 className="text-xl font-medium text-light mb-4">Services</h5>
-					<div className="flex flex-col gap-y-3 text-[17px]">
+					<h5 className="text-xl font-medium text-light mb-2 lg:mb-4">
+						Services
+					</h5>
+					<div className="flex flex-col gap-y-2 lg:gap-y-3 text-[17px]">
 						<a
 							href="#"
 							className="hover:text-light transition-colors duration-150"
@@ -73,10 +80,12 @@ export const Footer = () => {
 						</a>
 					</div>
 				</div>
-				{/* Services Links */}
+				{/* Policy Links */}
 				<div>
-					<h5 className="text-xl font-medium text-light mb-4">Policy</h5>
-					<div className="flex flex-col gap-y-3 text-[17px]">
+					<h5 className="text-xl font-medium text-light mb-2 lg:mb-4">
+						Policy
+					</h5>
+					<div className="flex flex-col gap-y-2 lg:gap-y-3 text-[17px]">
 						<a
 							href="#"
 							className="hover:text-light transition-colors duration-150"
@@ -99,8 +108,10 @@ export const Footer = () => {
 				</div>
 				{/* Social Links */}
 				<div>
-					<h5 class="text-xl font-semibold text-light mb-4">Social</h5>
-					<div class="flex flex-col gap-y-3 text-[17px]">
+					<h5 class="text-xl font-semibold text-light mb-2 lg:mb-4">
+						Social
+					</h5>
+					<div class="flex flex-col gap-y-2 lg:gap-y-3 text-[17px]">
 						<a
 							href="https://www.linkedin.com/in/mahnafdev"
 							className="flex items-center gap-x-2 hover:text-light transition-colors duration-150"
@@ -140,7 +151,7 @@ export const Footer = () => {
 				</div>
 			</div>
 			{/* Divider */}
-			<div className="w-full h-px bg-neutral-700/75 mt-16 mb-8" />
+			<div className="w-full h-px bg-neutral-700/75 mt-8 lg:mt-16 mb-8" />
 			<p className="text-center text-neutral-200">
 				&copy; 2026 HelpHive. All rights reserved.
 			</p>
