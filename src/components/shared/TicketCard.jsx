@@ -1,7 +1,13 @@
 import { CalendarIcon } from "lucide-react";
 import { CircleIcon } from "lucide-react";
 
-export const TicketCard = ({ ticket }) => {
+export const TicketCard = ({
+	ticket,
+	inProgressCount,
+	setInProgressCount,
+	inProgressTasks,
+	setInProgressTasks,
+}) => {
 	const priorityColor =
 		ticket.priority === "LOW"
 			? "text-green-600"
@@ -12,7 +18,18 @@ export const TicketCard = ({ ticket }) => {
 					: "";
 
 	return (
-		<div className="p-5 bg-neutral-50 shadow-md shadow-dark/10 rounded-xl text-neutral-500 hover:shadow-lg hover:shadow-dark/15 active:shadow-md transition-shadow duration-300 cursor-pointer">
+		<div
+			className="p-5 bg-neutral-50 shadow-md shadow-dark/10 rounded-xl text-neutral-500 hover:shadow-lg hover:shadow-dark/15 active:shadow-md transition-shadow duration-300 cursor-pointer"
+			onClick={() => {
+				if (!inProgressTasks.includes(ticket)) {
+					setInProgressCount(inProgressCount + 1);
+					setInProgressTasks([...inProgressTasks, ticket]);
+					alert("Task status updated to In-Progress");
+				} else {
+					alert("Task is already marked as In-Progress");
+				}
+			}}
+		>
 			<div className="flex items-center justify-between gap-x-1 mb-2">
 				{/* Title */}
 				<h6 className="text-lg font-semibold text-dark line-clamp-1">

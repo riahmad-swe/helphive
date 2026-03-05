@@ -1,7 +1,13 @@
 import { use } from "react";
 import { TicketCard } from "../shared/TicketCard";
 
-export const CustomerTickets = ({ ticketsPromise }) => {
+export const CustomerTickets = ({
+	ticketsPromise,
+	inProgressCount,
+	setInProgressCount,
+	inProgressTasks,
+	setInProgressTasks,
+}) => {
 	const tickets = use(ticketsPromise);
 
 	return (
@@ -16,6 +22,10 @@ export const CustomerTickets = ({ ticketsPromise }) => {
 					<TicketCard
 						key={ticket.id}
 						ticket={ticket}
+						inProgressCount={inProgressCount}
+						setInProgressCount={setInProgressCount}
+						inProgressTasks={inProgressTasks}
+						setInProgressTasks={setInProgressTasks}
 					/>
 				))}
 			</div>
