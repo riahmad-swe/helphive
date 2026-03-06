@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 export const InProgressTaskCard = ({
 	task,
 	inProgressCount,
@@ -27,7 +29,7 @@ export const InProgressTaskCard = ({
 						),
 					);
 					setResolvedTasks([...resolvedTasks, task]);
-					alert("Task status updated to Resolved");
+					toast.success("Task status updated to Resolved");
 				}}
 			>
 				Complete

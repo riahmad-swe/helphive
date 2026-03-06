@@ -1,5 +1,6 @@
 import { CalendarIcon } from "lucide-react";
 import { CircleIcon } from "lucide-react";
+import { toast } from "react-toastify";
 
 export const TicketCard = ({
 	ticket,
@@ -24,9 +25,9 @@ export const TicketCard = ({
 				if (!inProgressTasks.includes(ticket)) {
 					setInProgressCount(inProgressCount + 1);
 					setInProgressTasks([...inProgressTasks, ticket]);
-					alert("Task status updated to In-Progress");
+					toast.success("Task status updated to In-Progress");
 				} else {
-					alert("Task is already marked as In-Progress");
+					toast.error("Task is already marked as In-Progress");
 				}
 			}}
 		>
